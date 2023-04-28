@@ -7,7 +7,7 @@ from db_a203f4.hardware
 WHERE hardware.amount = 0
 ;
 -- 3 Вывести среднюю цену монитора
-SELECT sum(hardware.price / 13)
+SELECT avg(hardware.price)
 FROM db_a203f4.hardware
 WHERE hardware.title like '%Монитор%'
 ;
