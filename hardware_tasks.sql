@@ -29,9 +29,11 @@ FROM db_a203f4.hardware
 where hardware.tag = 'discount'
 ;
 -- 7 Вывести название и цену самой дорогой новинки
-SELECT hardware.title, hardware.price
+SELECT*
 FROM db_a203f4.hardware
-where hardware.title = 'Монитор Dexp 7APVYKMEQS'
+where hardware.tag = 'new'
+order by hardware.price desc
+limit 1
 ;
 -- 8 Добавить в таблицу товар Ноутбук Lenovo 2BXKQ7E9XD как новинку по цене 54500 руб. в единственном экземпляре
 INSERT INTO db_a203f4.hardware (title, price, amount, tag) 
