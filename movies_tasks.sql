@@ -57,5 +57,5 @@ join genres on movies.genres_id = genres.id
 group by genres.title;
 -- 10. Найти и удалить комедию "Дикие истории" 2014-го года
 delete from movies
-where movies.title = 'Дикие истории' and movies.year = '2014'
+where movies.title = 'Дикие истории' and genres.title = 'комедия'
 limit 1000
